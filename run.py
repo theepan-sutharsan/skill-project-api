@@ -17,9 +17,15 @@ def ensure_role_column():
         db.session.commit()
 
 
-if __name__ == "__main__":
+def init_db():
     with app.app_context():
         db.create_all()
         ensure_role_column()
         run_seeds()
+
+
+# Runs on import so production servers (gunicorn on Railway) also initialize the DB.
+init_db()
+
+if __name__ == "__main__":
     app.run(debug=app.config["FLASK_DEBUG"])
