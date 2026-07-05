@@ -1,0 +1,4 @@
+user_name,user_email,password,location,role
+Demo Member,demo@skillswap.com,member123,Colombo,member
+Support Admin,support@skillswap.com,admin123,Colombo,admin
+CSV Tester,csvtest@skillswap.com,member123,Kandy,member
